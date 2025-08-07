@@ -1,4 +1,4 @@
-using SignalRPlayground.Hubs;
+using SignalRPlayground.Web.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 

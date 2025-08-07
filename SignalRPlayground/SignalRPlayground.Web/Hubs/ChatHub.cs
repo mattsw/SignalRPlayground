@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 
-namespace SignalRPlayground.Hubs;
+namespace SignalRPlayground.Web.Hubs;
 
 public class ChatHub : Hub
 {
