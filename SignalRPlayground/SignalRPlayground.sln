@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRPlayground.Web.Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRPlayground.Data.Models", "SignalRPlayground.Data.Models\SignalRPlayground.Data.Models.csproj", "{CA0940F2-0224-43BF-A848-46EADC974357}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRPlayground.UserTools", "SignalRPlayground.UserTools\SignalRPlayground.UserTools.csproj", "{56F2145D-6617-4918-8EDE-D0E27CB07834}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{CA0940F2-0224-43BF-A848-46EADC974357}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA0940F2-0224-43BF-A848-46EADC974357}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA0940F2-0224-43BF-A848-46EADC974357}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56F2145D-6617-4918-8EDE-D0E27CB07834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F2145D-6617-4918-8EDE-D0E27CB07834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F2145D-6617-4918-8EDE-D0E27CB07834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F2145D-6617-4918-8EDE-D0E27CB07834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
