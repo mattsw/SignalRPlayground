@@ -26,7 +26,6 @@ public class ChatHubTests
         var mockClientsProxy = new Mock<IClientProxy>();
         mockCaller.Setup(caller => caller.Caller).Returns(mockClientProxy.Object);
         mockCaller.Setup(caller => caller.All).Returns(mockClientsProxy.Object);
-        
         sut.Clients = mockCaller.Object;
         
         await sut.NewMessage(testUserId, testMessage);

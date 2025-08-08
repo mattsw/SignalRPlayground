@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRPlayground.Web", "Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRPlayground.Web.Tests", "SignalRPlayground.Web.Tests\SignalRPlayground.Web.Tests.csproj", "{AFED5C83-4108-4F12-9295-F943344C954D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRPlayground.Data.Models", "SignalRPlayground.Data.Models\SignalRPlayground.Data.Models.csproj", "{CA0940F2-0224-43BF-A848-46EADC974357}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{AFED5C83-4108-4F12-9295-F943344C954D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFED5C83-4108-4F12-9295-F943344C954D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFED5C83-4108-4F12-9295-F943344C954D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA0940F2-0224-43BF-A848-46EADC974357}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0940F2-0224-43BF-A848-46EADC974357}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0940F2-0224-43BF-A848-46EADC974357}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0940F2-0224-43BF-A848-46EADC974357}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
