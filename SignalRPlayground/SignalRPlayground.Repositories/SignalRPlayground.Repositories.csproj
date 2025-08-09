@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SignalRPlayground.Repositories\SignalRPlayground.Repositories.csproj" />
+      <ProjectReference Include="..\SignalRPlayground.Data.Models\SignalRPlayground.Data.Models.csproj" />
     </ItemGroup>
 
 </Project>

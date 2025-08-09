@@ -9,7 +9,7 @@ using SignalRPlayground.Data.Models.Contexts;
 
 namespace SignalRPlayground.Data.Models.Migrations
 {
-    [DbContext(typeof(UserContext))]
+    [DbContext(typeof(LocalPlaygroundContext))]
     partial class UserContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

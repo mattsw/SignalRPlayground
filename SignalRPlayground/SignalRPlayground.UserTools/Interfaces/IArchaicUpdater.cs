@@ -2,6 +2,6 @@
 
 public interface IArchaicUpdater
 {
-    string TransmuteFirstName(string firstName);
-    string TransmuteLastName(string lastName);
+    string TransmuteFirstName(string userId, string firstName);
+    string TransmuteLastName(string userId, string lastName);
 }

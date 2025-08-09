@@ -1,17 +1,22 @@
-﻿using SignalRPlayground.UserTools.AncientUserManager;
+﻿using SignalRPlayground.Repositories.Users;
+using SignalRPlayground.UserTools.AncientUserManager;
 using SignalRPlayground.UserTools.Interfaces;
 
 namespace SignalRPlayground.UserTools;
 
 public class UserManagerAdapter(IArchaicUpdater oldUserUserManager) : IUserManager
 {
-    public string UpdateFirstName(string firstName)
+    public UserDto UpdateFirstName(UserDto user)
     {
-        return oldUserUserManager.TransmuteFirstName(firstName);
+        var firstName = oldUserUserManager.TransmuteFirstName(user.UserId, user.FirstName);
+        user.FirstName = firstName;
+        return user;
     }
 
-    public string UpdateLastName(string lastName)
+    public UserDto UpdateLastName(UserDto user)
     {
-        return oldUserUserManager.TransmuteFirstName(lastName);
+        var lastName = oldUserUserManager.TransmuteLastName(user.UserId, user.LastName);
+        user.LastName = lastName;
+        return user;
     }
 }

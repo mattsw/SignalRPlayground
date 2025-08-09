@@ -1,7 +1,9 @@
-﻿namespace SignalRPlayground.UserTools.Interfaces;
+﻿using SignalRPlayground.Repositories.Users;
+
+namespace SignalRPlayground.UserTools.Interfaces;
 
 public interface IUserManager
 {
-    string UpdateFirstName(string firstName);
-    string UpdateLastName(string lastName);
+    UserDto UpdateFirstName(UserDto user);
+    UserDto UpdateLastName(UserDto user);
 }

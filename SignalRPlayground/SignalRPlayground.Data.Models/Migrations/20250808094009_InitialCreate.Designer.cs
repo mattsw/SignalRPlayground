@@ -10,7 +10,7 @@ using SignalRPlayground.Data.Models.Contexts;
 
 namespace SignalRPlayground.Data.Models.Migrations
 {
-    [DbContext(typeof(UserContext))]
+    [DbContext(typeof(LocalPlaygroundContext))]
     [Migration("20250808094009_InitialCreate")]
     partial class InitialCreate
     {
