@@ -1,4 +1,4 @@
-using SignalRPlayground.Hubs;
+using SignalRPlayground.Web.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +10,5 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.MapHub<ChatHub>("/hub");
-
-app.MapGet("/", () => "Hello World!");
 
 app.Run();
