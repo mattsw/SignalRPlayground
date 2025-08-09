@@ -31,6 +31,9 @@ artifacts/
 # node
 node_modules
 
+#jetbrains ide
+.idea
+
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
 
