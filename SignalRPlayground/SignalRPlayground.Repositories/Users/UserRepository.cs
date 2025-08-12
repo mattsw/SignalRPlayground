@@ -21,6 +21,7 @@ public class UserRepository(LocalPlaygroundContext context) : IUserRepository
         {
             FirstName = user.FirstName,
             LastName = user.LastName,
+            UserId = user.UserId
         };
         _context.Users.Add(userToCreate);
         _context.SaveChanges();
@@ -43,6 +44,14 @@ public class UserRepository(LocalPlaygroundContext context) : IUserRepository
 
     public UserDto Update(UserDto user)
     {
+        if (!_context.Users.Any(val => val.UserId == user.UserId))
+        {
+            //guard to preserve put method create if not exists
+            //this introduces a read before write data integrity issue, but for this small app it should be okay
+            Create(user);
+            return user;
+        }
+        
         var userToUpdate = new User
         {
             UserId = user.UserId,
