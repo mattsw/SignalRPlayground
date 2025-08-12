@@ -7,3 +7,7 @@ It will focus primarily on
 - primarily TDD where the test starts as failure and should end in the development of a feature test by test
 
 It is my hope through the commit frequency, units of work completed, design decisions, comments, technologies, and language mastery that I demonstrate my ability to learn, adapt, and adopt new technologies.
+
+# How to use
+- run `npm run release` in the *.Web folder
+- build and run the web app in your favorite ide
