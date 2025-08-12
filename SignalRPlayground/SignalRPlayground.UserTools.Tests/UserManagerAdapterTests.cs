@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using Microsoft.EntityFrameworkCore;
+using Moq;
 using SignalRPlayground.Repositories.Users;
 using SignalRPlayground.UserTools.AncientUserManager;
 using SignalRPlayground.UserTools.Interfaces;
@@ -12,7 +13,8 @@ public class UserManagerAdapterTests
     [Test]
     public void UserManagerAdapter_ShouldInstantiateWithOldManager()
     {
-        var sut = new UserManagerAdapter(new OldUserManager());
+        var mockRepository = new Mock<IUserRepository>();
+        var sut = new UserManagerAdapter(new OldUserManager(mockRepository.Object));
         
         Assert.That(sut, Is.Not.Null);
     }
@@ -20,7 +22,8 @@ public class UserManagerAdapterTests
     [Test]
     public void UserManagerAdapter_ShouldWorkWithNewInterface()
     {
-        var sut = new UserManagerAdapter(new OldUserManager());
+        var mockRepository = new Mock<IUserRepository>();
+        var sut = new UserManagerAdapter(new OldUserManager(mockRepository.Object));
         
         Assert.That(sut, Is.Not.Null);
         Assert.That(sut, Is.InstanceOf<IUserManager>());

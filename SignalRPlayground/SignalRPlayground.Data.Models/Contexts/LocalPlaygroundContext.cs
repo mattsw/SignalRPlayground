@@ -7,7 +7,7 @@ public class LocalPlaygroundContext(DbContextOptions<LocalPlaygroundContext> opt
 {
     //TODO move this to appsettings/secrets though it's fine for initial dev since there's nothing super scary
     private const string ConnectionString = "data source=DESKTOP-TSFDMTT;initial catalog=LocalPlayground;trusted_connection=true;TrustServerCertificate=true;";
-    DbSet<User> Users { get; set; }
+    public DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

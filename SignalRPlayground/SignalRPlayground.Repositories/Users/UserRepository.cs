@@ -1,34 +1,41 @@
-﻿using SignalRPlayground.Data.Models.Entities;
+﻿using SignalRPlayground.Data.Models.Contexts;
+using SignalRPlayground.Data.Models.Entities;
 
 namespace SignalRPlayground.Repositories.Users;
 
 public interface IUserRepository
 {
-    User CreateUser(User user);
-    User FindUser(string userId);
-    User UpdateUser(User user);
-    User DeleteUser(User user);
+    User Create(User user);
+    User? Find(string userId);
+    User Update(User user);
+    User Delete(User user);
 }
 
-public class UserRepository : IUserRepository
+public class UserRepository(LocalPlaygroundContext context) : IUserRepository
 {
-    public User CreateUser(User user)
+    private readonly LocalPlaygroundContext _context = context;
+
+    public User Create(User user)
     {
-        throw new NotImplementedException();
+        _context.Users.Add(user);
+        _context.SaveChanges();
+        return user;
     }
 
-    public User FindUser(string userId)
+    public User? Find(string userId)
     {
-        throw new NotImplementedException();
+        return _context.Users.Find(userId);
     }
 
-    public User UpdateUser(User user)
+    public User Update(User user)
     {
-        throw new NotImplementedException();
+        _context.Users.Update(user);
+        return user;
     }
 
-    public User DeleteUser(User user)
+    public User Delete(User user)
     {
-        throw new NotImplementedException();
+        _context.Users.Remove(user);
+        return user;
     }
 }
