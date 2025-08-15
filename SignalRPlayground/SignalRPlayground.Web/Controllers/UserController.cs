@@ -12,10 +12,6 @@ public class UserController(INewUserManager userManager) : ControllerBase
     private readonly INewUserManager _userManager = userManager;
 
     [HttpPut]
-    public IActionResult UpdateUser(UserDto user)
-    {
-        _userManager.UpdateUser(user);
-
-        return Ok(user);
-    }
+    public IActionResult UpdateUser(UserDto user) =>
+        Ok(_userManager.UpdateUser(user));
 }
